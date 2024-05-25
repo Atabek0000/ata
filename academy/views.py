@@ -14,10 +14,6 @@ def serif(request):
     return render(request, 'serif.html')
 
 
-def register(request):
-    return render(request, 'register.html')
-
-
 def master_signup(request):
     if request.method == 'POST':
         form = MasterSignUpForm(request.POST, request.FILES)

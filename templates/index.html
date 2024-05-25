@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Management System</h1>
+        <div id="app"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                orders: []
+            },
+            mounted() {
+                axios.get('/orders/')
+                    .then(response => {
+                        this.orders = response.data;
+                    });
+            },
+            template: `
+                <div>
+                    <h2>Orders</h2>
+                    <ul>
+                        <li v-for="order in orders" :key="order.id">
+                            {{ order.description }} - {{ order.status }}
+                        </li>
+                    </ul>
+                </div>
+            `
+        });
+    </script>
+</body>
+</html>
