@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мой Веб-Сайт про технике</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Добро пожаловать!</h2>
+                <p>Это пример простого веб-сайта.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>Здесь находится информация о нашей компании.</p>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2>Услуги</h2>
+                <p>Описание наших услуг.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами через форму ниже.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мой Веб-Сайт. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
