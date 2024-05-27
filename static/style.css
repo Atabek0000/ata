@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-    background-image: url(images/hero\ image.png);
+    background-image: url("images/");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,7 +120,7 @@ body {
     width: 61px;
     background-color: #fff;
     top: 124px;
-    left: 308px;
+    left: 396px;
 }
 
 .header-button {
@@ -181,8 +181,8 @@ body {
 }
 
 .card-img {
-    width: 20%;
-    height: 20%;
+    width: 35%;
+    height: 40%;
 }
 /* end */
 
@@ -244,29 +244,28 @@ body {
 .imgages-1 {
     position: absolute;
     z-index: 0;
-    top: 54px;
-    left: 211px;
+    top: 5px;
+    left: 250px;
+    height: 145%;
+    width: 390px;
 }
 
 .imgages-2 {
     position: absolute;
     z-index: 999;
     top: -92px;
-    left: 383px;
+    left: 460px;
+    width: 380px;
+    height: 150%;
 }
 
 .imgages-3 {
     position: absolute;
     z-index: 999;
-    top: 241px;
-    left: 486px;
-}
-
-.imgages-4 {
-    position: absolute;
-    z-index: 0;
-    top: 270px;
-    left: 357px;
+    top: 30px;
+    left: 690px;
+    height: 145%;
+    width: 370px;
 }
 
 .black-block {
@@ -333,6 +332,8 @@ body {
 
 .burgers-image {
     margin-right: 40px;
+    height: -1;
+
 }
 
 .burger-text {
@@ -341,11 +342,17 @@ body {
     font-weight: 400;
     margin-left: 35px;
 }
+
+.burger {
+    width: 150%;
+    height: 190px;
+}
+
 /* end */
 
 
 .menu {
-    background-image: url(images/bar-1869656_1920\ 2.png);
+    background-image: url(images/Type21.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -354,8 +361,8 @@ body {
 .menu-title {
     font-family: 'Tinos', serif;
     font-size: 54px;
-    padding-top: 98px;
-    color: #fff;
+    padding-top: 62px;
+    color: #20241b;
     text-align: center;
     padding-bottom: 138px;
 }
@@ -402,6 +409,8 @@ body {
 
 .menu-img {
     position: relative;
+    width: 40%;
+    height: 10%;
 }
 
 .price-420 {
@@ -426,7 +435,7 @@ body {
     text-align: center;
     font-style: italic;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .coment-img {
@@ -475,7 +484,7 @@ body {
 .galery-up {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .cook {
@@ -497,6 +506,10 @@ body {
 .cook-content {
     display: flex;
     justify-content: space-around;
+}
+
+.cook-img {
+    width: 500px;
 }
 
 .footer {
