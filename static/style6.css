@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(135deg, #f6e632, #41d3b8);
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-container {
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contacts-container h2 {
+    margin: 0 0 10px;
+}
+
+.contacts-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacts-container ul li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.contacts-container ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.contacts-container ul li.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.contacts-container .contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.contacts-container .contact-form input {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.contacts-container .contact-form button {
+    padding: 5px;
+}
+
+.chat-container {
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-box .message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.chat-box .message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.chat-box .message.received {
+    background-color: #fff;
+    align-self: flex-start;
+}
+
+.chat-form {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#message-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 0 0 0 5px;
+}
+
+#message-input:focus {
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 0 0 5px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

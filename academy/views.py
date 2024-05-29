@@ -14,6 +14,14 @@ def serif(request):
     return render(request, 'serif.html')
 
 
+def o_nas(request):
+    return render(request, 'o_nas.html')
+
+
+def message(request):
+    return render(request, 'message.html')
+
+
 def master_signup(request):
     if request.method == 'POST':
         form = MasterSignUpForm(request.POST, request.FILES)
