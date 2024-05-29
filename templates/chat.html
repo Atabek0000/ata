@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="{% static 'style7.css' %}">
+</head>
+<body>
+
+    <div id="chat-container">
+        <div id="message-list">
+
+        </div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Enter your message">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+
+        const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('message-input');
+        const messageList = document.getElementById('message-list');
+
+        messageForm.addEventListener('submit', async (e) => {
+           e.preventDefault()
+           const content = messageInput.value;
+
+           const response = await fetch('/api/messages/', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRFToken': getCookie('csrftoken')
+              },
+              body: JSON.stringify({content})
+           });
+
+           if (response.ok) {
+               messageInput.value = '';
+               const newMessage = await response.json();
+               displayMessage(newMessage)
+           }
+        });
+        async function loadMessages() {
+            const response = await fetch('/api/messages/');
+            const messages = await response.json();
+            messages.forEach(displayMessage);
+        }
+
+        function  displayMessage(message) {
+            const div = document.createElement('div');
+            div.textContent = `${message.user.username}: ${message.content}`;
+            messageList.appendChild(div);
+        }
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookie = document.cookie.split(';');
+                for (let i = 0; i < cookie.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1))
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        loadMessages();
+    </script>
+
+</body>
+</html>

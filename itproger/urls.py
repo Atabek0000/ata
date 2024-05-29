@@ -10,6 +10,7 @@ urlpatterns = [
     path('', include('myapp.urls')),
     path('api/', include('contacts.urls')),
     path('', TemplateView.as_view(template_name='about.html')),
+
 ]
 
 if settings.DEBUG:

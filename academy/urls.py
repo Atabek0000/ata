@@ -7,6 +7,7 @@ urlpatterns = [
     path('serif/', views.serif, name='serif'),
     path('o_nas/', views.o_nas, name='o_nas'),
     path('message/', views.message, name='message'),
+    path('about/', views.about, name='about'),
     path('signup/master/', master_signup, name='master_signup'),
     path('signup/client/', client_signup, name='client_signup'),
     path('login/', user_login, name='login'),

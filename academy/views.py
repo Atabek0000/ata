@@ -22,6 +22,10 @@ def message(request):
     return render(request, 'message.html')
 
 
+def about(request):
+    return render(request, 'main/about.html')
+
+
 def master_signup(request):
     if request.method == 'POST':
         form = MasterSignUpForm(request.POST, request.FILES)
